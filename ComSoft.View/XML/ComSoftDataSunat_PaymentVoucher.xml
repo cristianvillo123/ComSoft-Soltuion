@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PaymentVoucher>
+  <Voucher>
+    <Code>01</Code>
+    <Decription>FACTURA</Decription>
+  </Voucher>
+  <Voucher>
+    <Code>03</Code>
+    <Decription>BOLETA DE VENTA</Decription>
+  </Voucher>
+  <Voucher>
+    <Code>07</Code>
+    <Decription>NOTA DE CREDITO</Decription>
+  </Voucher>
+  <Voucher>
+    <Code>08</Code>
+    <Decription>NOTA DE DEBITO</Decription>
+  </Voucher>
+  <Voucher>
+    <Code>09</Code>
+    <Decription>GUIA REMISION REMITENTE</Decription>
+  </Voucher>
+  <Voucher>
+    <Code>31</Code>
+    <Decription>GUIA REMISION TRANSPORTISTA</Decription>
+  </Voucher>
+</PaymentVoucher>

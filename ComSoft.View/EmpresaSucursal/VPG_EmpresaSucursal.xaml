@@ -1,0 +1,157 @@
+﻿<Page x:Class="ComSoft.View.EmpresaSucursal.VPG_EmpresaSucursal"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+       xmlns:local="clr-namespace:ComSoft.View.Empresa"
+       xmlns:Ctrls="http://metro.mahapps.com/winfx/xaml/controls" 
+      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1200"
+      Title="S">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Popupbox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Height="Auto"  Background="White">
+            <Grid Grid.Row="0" Grid.Column="0"  VerticalAlignment="Top" Margin="15,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Sucursales de la empresa Comfarvi" VerticalAlignment="Center" Foreground="Gray" Padding="0,0,0,0" FontSize="14"
+                           FontFamily="Calibri Light"/>
+                </Grid>
+                <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal">
+                    <Button Style="{DynamicResource CristianHernandezStyleButtonCancelar}" Command="{Binding ICancelar}" Visibility="Hidden"/>
+                    <Button Style="{DynamicResource CristianHernandezStyleButtonCancelar}" Command="{Binding ICancelar}" Visibility="{Binding Property_VisibilityNewPage}"/>
+                </StackPanel>
+            </Grid>
+            <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Bottom">
+                <Ctrls:MetroProgressBar Background="#00FFFFFF" VerticalAlignment="Top"  Foreground="Gray" IsIndeterminate="{Binding Property_IsIndeterminate,UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="0" Margin="0,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="347"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="{x:Type ListViewItem}">
+                        <Setter Setter.Property="Control.Template">
+                            <Setter.Value>
+                                <ControlTemplate ControlTemplate.TargetType="{x:Type ListViewItem}">
+                                    <Grid x:Name="Brd">
+                                        <Border  Width="310" Height="45" 
+                                                BorderThickness="0,0,0,1" BorderBrush="#e3e2e2" ToolTip="{Binding Detalle}">
+                                            <Grid>
+                                                <Grid Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition />
+                                                        <ColumnDefinition Width="Auto" />
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="5,0,0,0">
+                                                        <TextBlock  Margin="0,0,0,0"  FontFamily="Segoe UI" Foreground="Gray" TextWrapping="Wrap"  Text="{Binding Sucursal}"  />
+                                                    </StackPanel>
+
+                                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"  Grid.RowSpan="2" Grid.Column="1">
+                                                        <materialDesign:PopupBox Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource MaterialDesignToolPopupBox}" 
+                                                                                 HorizontalAlignment="Right"  VerticalAlignment="Center">
+                                                            <StackPanel>
+                                                                <Button Style="{DynamicResource CristianHernandezStyleButtonEditar}"  Content="Editar"  
+                                                                        Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Page}}, Path=DataContext.IEditar}"
+                                                                        CommandParameter="{Binding .}"/>
+                                                                <Button Style="{DynamicResource CristianHernandezStyleButtonEliminar}"  Content="Eliminar"  
+                                                                        Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Page}}, Path=DataContext.IEliminar}"
+                                                                        CommandParameter="{Binding .}"/>
+                                                                <Button Style="{DynamicResource CristianHernandezStyleButtonAlmacen}"  Content="Almacén"  
+                                                                        Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Page}}, Path=DataContext.IAlmacen}"
+                                                                        CommandParameter="{Binding .}"/>
+                                                            </StackPanel>
+                                                        </materialDesign:PopupBox>
+                                                    </StackPanel>
+                                                </Grid>
+                                            </Grid>
+                                        </Border>
+                                    </Grid>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Trigger.Property="UIElement.IsMouseOver" Trigger.Value="True">
+                                            <Setter Setter.TargetName="Brd" Setter.Value="#eeeeee" Setter.Property="Border.Background" />
+                                        </Trigger>
+                                        <Trigger Property="Selector.IsSelected" Value="True">
+                                            <Setter TargetName="Brd" Property="Background" Value="#e9e9e9"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ResourceDictionary>
+            </Grid.Resources>
+            <Grid Grid.Row="0" Grid.Column="0" Background="WhiteSmoke">
+                <Grid Grid.Row="0" Grid.Column="0" Margin="15,15,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" Grid.Column="0"  Margin="0,5,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="5,0,0,0" Foreground="Gray"
+                               Text="Empresa Sucursal" FontSize="18" FontFamily="Calibri Light"/>
+                        <Button Style="{DynamicResource CristianHernandezStyleButtonActualizar}" Command="{Binding IActualizar,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1"/>
+                        <Button Style="{DynamicResource CristianHernandezStyleButtonNuevo}" Command="{Binding INuevo,UpdateSourceTrigger=PropertyChanged}" Grid.Column="2"/>
+                    </Grid>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Margin="5,10,10,10" Foreground="Gray" 
+                           TextWrapping="Wrap" FontFamily="Calibri Light"
+                           Text="Sección de documento, puede contar con más sucursales presionando el botón agregar (+) en la parte superior derecho." />
+
+                    <Grid Grid.Row="2" Grid.Column="0" >
+                        <Ctrls:MetroProgressBar Background="#00FFFFFF" VerticalAlignment="Top" Foreground="Gray" 
+                                            Margin="0,0,0,0" IsIndeterminate="{Binding IsIndeterminate}" />
+
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="2,5,0,10">
+                            <ListView  ItemsSource="{Binding Collection_DatoEmpresaSucursal}" Margin="0"
+                                       SelectedItem="{Binding SelectedItem}"/>
+                        </ScrollViewer>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <Separator Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Margin="0" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
+                       Background="White" />
+
+            <Frame Grid.Row="0" Grid.Column="1" x:Name="MyFrameEmpresaSucursal" BorderThickness="0" 
+                       NavigationUIVisibility="Hidden"
+                       HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch"  Margin="0,1,0,0"/>
+        </Grid>
+    </Grid>
+</Page>

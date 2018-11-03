@@ -1,0 +1,27 @@
+﻿<Page x:Class="ComSoft.View.Principal.VPG_Inicio"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ComSoft.View.Principal"
+      mc:Ignorable="d" 
+     
+      d:DesignHeight="700" d:DesignWidth="1200"
+      Title="VPG_Inicio">
+
+    <Grid Background="White" Margin="2,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Image Source="/ComSoft;component/Resource/industrial.png" Width="150" Height="150"/>
+            <StackPanel Margin="10,170,0,0">
+                <TextBlock Text="ComSoft" Foreground="#374553" FontSize="40" FontWeight="Bold" />
+                <TextBlock Text="Version 1.0" Foreground="#374553" FontSize="20" FontWeight="Bold"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>

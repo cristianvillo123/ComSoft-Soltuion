@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E4D0F8E-BDDA-4162-B8D7-A86CA20FAD04}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ComSoft.ViewModel</RootNamespace>
+    <AssemblyName>ComSoft.ViewModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CristianHernandez" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Almacen\VMMP_Almacen.cs" />
+    <Compile Include="Almacen\VMPG_Almacen.cs" />
+    <Compile Include="ComSoftMensaje.cs" />
+    <Compile Include="Cotizacion\VMPG_Cotizacion.cs" />
+    <Compile Include="Cotizacion\VMPG_ListadoCotizacion.cs" />
+    <Compile Include="Documento\VMMP_Documento.cs" />
+    <Compile Include="Documento\VMPG_Documento.cs" />
+    <Compile Include="Documento\VMPG_DocumentoSerie.cs" />
+    <Compile Include="EmpresaSucursal\VMMP_EmpresaSucursal.cs" />
+    <Compile Include="EmpresaSucursal\VMPG_EmpresaSucursal.cs" />
+    <Compile Include="Empresa\VMPG_Empresa.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Desarrollo\CristianHernandez\WPF\CristianHernandez.WPF\CristianHernandez.WPF.csproj">
+      <Project>{32EE8A76-D7E2-4BBC-A65D-05283A473854}</Project>
+      <Name>CristianHernandez.WPF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComSoft.Model\ComSoft.Model.csproj">
+      <Project>{D5A7C49E-BD84-4EC3-9506-404080E17F69}</Project>
+      <Name>ComSoft.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

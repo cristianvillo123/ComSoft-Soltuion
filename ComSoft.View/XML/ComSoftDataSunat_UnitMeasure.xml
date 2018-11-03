@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Catalog>
+  <UnitsMeasures>
+    <UnitMeasure>
+      <Code>4A</Code>
+      <Description>BOBINAS</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>BJ</Code>
+      <Description>BALDE</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>BLL</Code>
+      <Description>BARRILES</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>BG</Code>
+      <Description>BOLSA</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>BO</Code>
+      <Description>BOTELLAS</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>BX</Code>
+      <Description>CAJA</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>CT</Code>
+      <Description>CARTONES</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>CMK</Code>
+      <Description>CENTIMETRO CUADRADO</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>CMQ</Code>
+      <Description>CENTRIMETRO CUBICO</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>CMT</Code>
+      <Description>CENTIMETRO LINEAL</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>CEN</Code>
+      <Description>CIENTO DE UNIDADES</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>CY</Code>
+      <Description>CILINDROS</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>CJ</Code>
+      <Description>CONOS</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>DZN</Code>
+      <Description>DOCENA</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>DZN</Code>
+      <Description>DOCENA</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>DZP</Code>
+      <Description>DOCENA POR 10**6</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>DZP</Code>
+      <Description>DOCENA POR 10**6</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>BE</Code>
+      <Description>FARDO</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>GLI</Code>
+      <Description>GALONES INGLES</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>GRM</Code>
+      <Description>GRAMO</Description>
+    </UnitMeasure>
+    <UnitMeasure>
+      <Code>GRM</Code>
+      <Description>GRAMO</Description>
+    </UnitMeasure>
+  </UnitsMeasures>
+</Catalog>
